@@ -884,6 +884,7 @@ a { color: var(--link); text-decoration: none; }
 .readme table { border-collapse: collapse; margin: 0 0 14px; }
 .readme th { text-align: left; font-weight: 600; border-bottom: 1px solid rgba(255, 255, 255, 0.69); }
 .readme th, .readme td { padding: 5px 10px; }
+.readme td:nth-child(2) { white-space: nowrap; }
 .readme tr + tr td { border-top: 1px solid rgba(255, 255, 255, 0.18); }
 .readme pre { margin: 0 0 14px; padding: 16px; border-radius: 3px; background: rgba(10, 10, 10, 0.4); font-family: var(--mono); font-size: 14px; line-height: 1.5; color: var(--foreground); }
 .readme pre .k { color: #9CDCFE; } .readme pre .s { color: #CE9178; } .readme pre .b { color: #569CD6; } .readme pre .n { color: #B5CEA8; }
@@ -920,6 +921,58 @@ a { color: var(--link); text-decoration: none; }
 .callout-head .dots { margin-left: auto; display: flex; gap: 4px; }
 .callout-head .dots i { width: 6px; height: 6px; border-radius: 50%; background: #4A4A4A; }
 .callout-head .dots i.on { background: #2DD4BF; }
+.t-en { color: #4FC1FF; }
+.shot-tour .pill { padding: 0 6px; border-radius: 9px; font-size: 11px; line-height: 16px; }
+.pill.ok { background: rgba(115, 201, 145, 0.16); color: #73C991; }
+.pill.open { background: rgba(204, 167, 0, 0.18); color: #E2C08D; }
+.callout-head .sev { margin-left: auto; display: flex; gap: 6px; }
+.callout-head .sev span { padding: 0 7px; border-radius: 9px; font-size: 11px; line-height: 17px; }
+.sev .cat { background: rgba(77, 170, 252, 0.15); color: #7CC0FD; }
+.sev .major { background: rgba(204, 167, 0, 0.18); color: #E2C08D; }
+.pill.info { background: rgba(77, 170, 252, 0.15); color: #7CC0FD; }
+.callout-head .prog { margin-left: auto; color: var(--description); font-size: 12px; }
+.ck-list { padding: 6px 0 2px; }
+.ck { display: flex; align-items: flex-start; gap: 8px; padding: 4px 12px; }
+.ck .box { width: 16px; height: 16px; flex: none; margin-top: 2px; border-radius: 3px; border: 1px solid #5A5A5A; background: #313131; display: flex; align-items: center; justify-content: center; }
+.ck.done .box { background: #14B8A6; border-color: #14B8A6; color: #0B2622; }
+.ck.done .box .codicon[class*="codicon-"] { font-size: 12px; font-weight: 700; }
+.ck .rule { color: var(--description); font-family: var(--mono); font-size: 12px; margin-right: 6px; }
+.ck.done .txt { color: var(--description); }
+.ck.current { background: rgba(20, 184, 166, 0.10); box-shadow: inset 2px 0 0 #14B8A6; }
+.ck .guide { margin-top: 6px; padding: 6px 10px; border-radius: 3px; background: rgba(255, 255, 255, 0.04); color: #C8C8C8; font-size: 12.5px; line-height: 19px; }
+.ck .guide b { color: #E7E7E7; font-weight: 600; }
+.ck .guide a { margin-left: 4px; }
+.shot-body { display: flex; align-items: stretch; }
+.shot-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.shot-main .shot-code { flex: 1; position: relative; font-size: 12.5px; line-height: 19px; }
+.shot-main .cl .g { width: 44px; padding-right: 14px; }
+.al { background: rgba(45, 212, 191, 0.22); border-radius: 2px; }
+.cn { background: rgba(192, 132, 252, 0.20); outline: 1px solid #C084FC; border-radius: 2px; }
+.cn .t-en { color: #E9D5FF; }
+.al-guide { position: absolute; width: 0; border-left: 1px dashed #2DD4BF; pointer-events: none; }
+.shot-view { width: 322px; flex: none; background: #181818; border-left: 1px solid #2B2B2B; font-family: var(--ui); font-size: 12.5px; color: #CCCCCC; padding-bottom: 6px; }
+.sv-title { height: 32px; display: flex; align-items: center; padding: 0 8px 0 14px; font-size: 11px; text-transform: uppercase; }
+.sv-title .actions { margin-left: auto; display: flex; gap: 6px; color: #CCCCCC; }
+.sv-title .actions .codicon[class*='codicon-'] { font-size: 14px; }
+.sv-head { height: 22px; display: flex; align-items: center; gap: 2px; padding-right: 8px; font-size: 11px; font-weight: 700; text-transform: uppercase; border-top: 1px solid #2B2B2B; }
+.sv-head .t { flex: 1; }
+.sv-head .count-badge { font-weight: 400; }
+.sv-row { height: 22px; display: flex; align-items: center; gap: 6px; padding: 0 8px 0 calc(var(--d, 0) * 16px + 6px); white-space: nowrap; }
+.sv-row .lbl { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.sv-row .lbl code, .sv-guide code { font-family: var(--mono); font-size: 12px; color: #D7BA7D; background: rgba(255, 255, 255, 0.08); border-radius: 3px; padding: 0 3px; }
+.sv-row .meta { color: var(--description); font-size: 12px; display: inline-flex; align-items: center; gap: 4px; }
+.sv-row .meta .codicon[class*='codicon-'] { font-size: 14px; color: #73C991; }
+.sv-row .cb { width: 16px; height: 16px; flex: none; border-radius: 3px; background: #313131; border: 1px solid #3C3C3C; display: inline-flex; align-items: center; justify-content: center; color: #CCCCCC; }
+.sv-row .cb .codicon[class*='codicon-'] { font-size: 14px; }
+.sv-row .rn { font-family: var(--mono); font-size: 11.5px; color: var(--description); }
+.sv-row .sw { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.sv-row .eye { color: #6E6E6E; }
+.sv-row .eye.on { color: #E7E7E7; }
+.sv-row.sel { background: #04395E; box-shadow: inset 0 0 0 1px #0078D4; }
+.sv-guide { margin: 2px 10px 6px 50px; padding: 8px 10px; border-radius: 3px; background: rgba(255, 255, 255, 0.045); color: #C8C8C8; font-size: 12px; line-height: 18px; white-space: normal; }
+.sv-guide code { font-family: var(--mono); color: #D7BA7D; }
+.sv-guide .btns { display: flex; gap: 6px; margin-top: 8px; }
+.sv-guide .wbtn { height: 22px; font-size: 12px; }
 .callout-body { padding: 10px 12px 4px; color: #D4D4D4; }
 .callout-body code { font-family: var(--mono); color: #D7BA7D; }
 .callout-foot { display: flex; align-items: center; gap: 8px; padding: 8px 12px 10px; }
@@ -1051,10 +1104,10 @@ a { color: var(--link); text-decoration: none; }
               </div>
             </div>
             <div class="ext-item selected">
-              <div class="xi xi-cwa"><span class="codicon codicon-compass"></span></div>
+              <div class="xi xi-cwa"><span class="codicon codicon-comment-discussion"></span></div>
               <div class="ext-details">
                 <div class="ext-header"><span class="ext-name">Code Walkthrough Assistant</span></div>
-                <div class="ext-desc">Guided, step-by-step tours of unfamiliar codebases, written by the people who know them best.</div>
+                <div class="ext-desc">Standards guidance and review checklists to support Code Walkthrough peer reviews.</div>
                 <div class="ext-footer">
                   <span class="ext-author">Priya Raman<span class="codicon codicon-verified-filled"></span></span>
                   <span class="ext-actions"><span class="tool-btn"><span class="codicon codicon-gear"></span></span></span>
@@ -1087,7 +1140,7 @@ a { color: var(--link); text-decoration: none; }
               <div class="xi xi-wibl"><b>WIBL</b><i></i></div>
               <div class="ext-details">
                 <div class="ext-header"><span class="ext-name">WIBL</span></div>
-                <div class="ext-desc">Bring WIBL into your editor. Search, view and update WIBL items without leaving VS Code.</div>
+                <div class="ext-desc">Compile and build images for target hardware with the WIBL build tools, straight from VS Code.</div>
                 <div class="ext-footer">
                   <span class="ext-author">Marcus Bell<span class="codicon codicon-verified-filled"></span></span>
                   <span class="ext-actions"><span class="btn-sm">Update</span><span class="tool-btn"><span class="codicon codicon-gear"></span></span></span>
@@ -1200,8 +1253,8 @@ a { color: var(--link); text-decoration: none; }
     <main class="editor">
       <div class="tabs">
         <div class="tab">
-          <span class="tab-icon"><span class="ts-icon">TS</span></span>
-          <span>orders.service.ts</span>
+          <span class="tab-icon"><span class="codicon codicon-file-code" style="color:#519ABA"></span></span>
+          <span>health_monitor.adb</span>
           <span class="tab-close"><span class="codicon codicon-close"></span></span>
         </div>
         <div class="tab active">
@@ -1217,7 +1270,7 @@ a { color: var(--link); text-decoration: none; }
 
       <div class="ext-editor">
         <div class="ee-header">
-          <div class="xi xi-cwa lg"><span class="codicon codicon-compass"></span></div>
+          <div class="xi xi-cwa lg"><span class="codicon codicon-comment-discussion"></span></div>
           <div class="ee-details">
             <div class="ee-name">Code Walkthrough Assistant</div>
             <div class="ee-subtitle">
@@ -1230,7 +1283,7 @@ a { color: var(--link); text-decoration: none; }
                 <span>(37)</span>
               </span>
             </div>
-            <div class="ee-desc">Guided, step-by-step tours of unfamiliar codebases, written by the people who know them best.</div>
+            <div class="ee-desc">Standards guidance and review checklists to support Code Walkthrough peer reviews.</div>
             <div class="ee-actions">
               <span class="split-btn"><span class="lbl">Disable</span><span class="sep"></span><span class="drop"><span class="codicon codicon-chevron-down"></span></span></span>
               <span class="split-btn"><span class="lbl">Uninstall</span><span class="sep"></span><span class="drop"><span class="codicon codicon-chevron-down"></span></span></span>
@@ -1257,78 +1310,103 @@ a { color: var(--link); text-decoration: none; }
                 <span class="shield"><span class="l">library api</span><span class="purple">v2.1</span></span>
                 <span class="shield"><span class="l">support</span><span class="grey">#dev-experience</span></span>
               </p>
-              <p>Code Walkthrough Assistant turns tribal knowledge into <strong>guided, interactive tours</strong> of a codebase. Authors record a walkthrough once. Readers step through it line by line, right inside VS Code, with explanations anchored to the exact code that matters.</p>
+              <p>Code Walkthrough Assistant supports our <strong>Code Walkthrough</strong> peer review process. It puts the <strong>coding standards</strong> and the <strong>review checklists</strong> next to the code being reviewed, so reviewers can carry out the standards and technical review with the right guidance in front of them, and record what they find as they go.</p>
 
               <figure class="shot">
-                <div class="shot-tabs">
-                  <div class="shot-tab"><span class="ts-icon">TS</span>orders.service.ts</div>
-                  <div class="shot-tour"><span class="codicon codicon-compass"></span>Orders API Walkthrough</div>
-                </div>
-                <div class="shot-code">
-<div class="cl"><span class="g">10</span><span class="t-cm">// Entry point for every new order from the web and mobile clients.</span></div>
-<div class="cl"><span class="g">11</span><span class="t-kw">export</span> <span class="t-st">async</span> <span class="t-st">function</span> <span class="t-fn">submitOrder</span><span class="t-pn">(</span><span class="t-var">order</span><span class="t-pn">: </span><span class="t-ty">Order</span><span class="t-pn">): </span><span class="t-ty">Promise</span><span class="t-pn">&lt;</span><span class="t-ty">OrderResult</span><span class="t-pn">&gt; {</span></div>
-<div class="cl hl"><span class="g">12</span>  <span class="t-st">const</span> <span class="t-var">result</span> <span class="t-pn">=</span> <span class="t-fn">validateOrder</span><span class="t-pn">(</span><span class="t-var">order</span><span class="t-pn">);</span></div>
-<div class="cl hl"><span class="g">13</span>  <span class="t-kw">if</span> <span class="t-pn">(!</span><span class="t-var">result</span><span class="t-pn">.</span><span class="t-var">ok</span><span class="t-pn">) {</span></div>
-<div class="cl hl"><span class="g">14</span>    <span class="t-kw">return</span> <span class="t-pn">{ </span><span class="t-var">status</span><span class="t-pn">: </span><span class="t-num">400</span><span class="t-pn">, </span><span class="t-var">errors</span><span class="t-pn">: </span><span class="t-var">result</span><span class="t-pn">.</span><span class="t-var">errors</span><span class="t-pn"> };</span></div>
-<div class="cl hl"><span class="g">15</span>  <span class="t-pn">}</span></div>
-<div class="callout">
-  <div class="callout-head">
-    <span class="codicon codicon-compass"></span>
-    <span class="step">Step 3 of 7</span><span>Validating the request</span>
-    <span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span>
-  </div>
-  <div class="callout-body">Every order is validated <em>before</em> it reaches the pricing service. Invalid requests return early with a <code>400</code>, so nothing downstream ever sees bad data. Validation rules live in <code>orders/rules.ts</code>.</div>
-  <div class="callout-foot">
-    <span class="avatar">PR</span>
-    <span class="who"><b>Priya Raman</b> · updated 2 days ago</span>
-    <span class="btns">
-      <span class="wbtn secondary"><span class="codicon codicon-arrow-left"></span>Previous</span>
-      <span class="wbtn primary">Next Step<span class="codicon codicon-arrow-right"></span></span>
-    </span>
-  </div>
-</div>
-<div class="cl"><span class="g">16</span>  <span class="t-st">const</span> <span class="t-var">quote</span> <span class="t-pn">=</span> <span class="t-kw">await</span> <span class="t-var">pricing</span><span class="t-pn">.</span><span class="t-fn">quote</span><span class="t-pn">(</span><span class="t-var">order</span><span class="t-pn">.</span><span class="t-var">items</span><span class="t-pn">);</span></div>
-<div class="cl"><span class="g">17</span>  <span class="t-kw">return</span> <span class="t-var">orders</span><span class="t-pn">.</span><span class="t-fn">create</span><span class="t-pn">({ ...</span><span class="t-var">order</span><span class="t-pn">, </span><span class="t-var">total</span><span class="t-pn">: </span><span class="t-var">quote</span><span class="t-pn">.</span><span class="t-var">total</span><span class="t-pn"> });</span></div>
-<div class="cl"><span class="g">18</span><span class="t-pn">}</span></div>
+                <div class="shot-body">
+                  <div class="shot-main">
+                    <div class="shot-tabs">
+                      <div class="shot-tab"><span class="codicon codicon-file-code" style="font-size:14px;color:#519ABA"></span>health_monitor.adb</div>
+                    </div>
+                    <div class="shot-code">
+<div class="cl"><span class="g">5</span><span class="t-st">package</span> <span class="t-st">body</span> <span class="t-ty">Health_Monitor</span> <span class="t-st">is</span></div>
+<div class="cl"><span class="g">6</span></div>
+<div class="cl"><span class="g">7</span>   <span class="cn"><span class="t-en">CYCLE_PERIOD</span></span>          <span class="al">:</span> <span class="t-st">constant</span> <span class="t-ty">Time_Span</span> <span class="al">:=</span> <span class="t-fn">Milliseconds</span> <span class="t-pn">(</span><span class="t-num">20</span><span class="t-pn">);</span></div>
+<div class="cl"><span class="g">8</span>   <span class="cn"><span class="t-en">MAX_MISSED_HEARTBEATS</span></span> <span class="al">:</span> <span class="t-st">constant</span> <span class="t-ty">Positive</span>  <span class="al">:=</span> <span class="t-num">3</span><span class="t-pn">;</span></div>
+<div class="cl"><span class="g">9</span>   <span class="cn"><span class="t-en">Log_Rate_Limit</span></span> <span class="al">:</span> <span class="t-st">constant</span> <span class="t-ty">Natural</span> <span class="al">:=</span> <span class="t-num">1</span><span class="t-pn">;</span></div>
+<div class="cl"><span class="g">10</span></div>
+<div class="cl"><span class="g">11</span>   <span class="t-st">type</span> <span class="t-ty">Unit_Record</span> <span class="t-st">is</span> <span class="t-st">record</span></div>
+<div class="cl"><span class="g">12</span>      <span class="t-var">Id</span>     <span class="al">:</span> <span class="t-ty">Unit_Id</span><span class="t-pn">;</span></div>
+<div class="cl"><span class="g">13</span>      <span class="t-var">Missed</span> <span class="al">:</span> <span class="t-ty">Natural</span>    <span class="al">:=</span> <span class="t-num">0</span><span class="t-pn">;</span></div>
+<div class="cl"><span class="g">14</span>      <span class="t-var">State</span>  <span class="al">:</span> <span class="t-ty">Unit_State</span> <span class="al">:=</span> <span class="t-en">Unknown</span><span class="t-pn">;</span></div>
+<div class="cl"><span class="g">15</span>   <span class="t-st">end</span> <span class="t-st">record</span><span class="t-pn">;</span></div>
+<div class="cl"><span class="g">16</span></div>
+<div class="cl"><span class="g">17</span>   <span class="t-var">Units</span> <span class="t-pn">:</span> <span class="t-st">array</span> <span class="t-pn">(</span><span class="t-ty">Unit_Id</span><span class="t-pn">)</span> <span class="t-st">of</span> <span class="t-ty">Unit_Record</span><span class="t-pn">;</span></div>
+<div class="cl"><span class="g">18</span></div>
+<div class="cl"><span class="g">19</span>   <span class="t-st">procedure</span> <span class="t-fn">Check_Unit</span> <span class="t-pn">(</span><span class="t-var">U</span> <span class="t-pn">:</span> <span class="t-st">in</span> <span class="t-st">out</span> <span class="t-ty">Unit_Record</span><span class="t-pn">)</span> <span class="t-st">is</span></div>
+<div class="cl"><span class="g">20</span>   <span class="t-st">begin</span></div>
+<div class="cl"><span class="g">21</span>      <span class="t-kw">if</span> <span class="t-ty">Comms</span><span class="t-pn">.</span><span class="t-ty">Heartbeat</span><span class="t-pn">.</span><span class="t-fn">Received</span> <span class="t-pn">(</span><span class="t-var">U</span><span class="t-pn">.</span><span class="t-var">Id</span><span class="t-pn">)</span> <span class="t-kw">then</span></div>
+<div class="cl"><span class="g">22</span>         <span class="t-var">U</span><span class="t-pn">.</span><span class="t-var">Missed</span> <span class="t-pn">:=</span> <span class="t-num">0</span><span class="t-pn">;</span></div>
+<!-- Visual aid for checklist item 3.2: alignment guides through each declaration block -->
+<div class="al-guide" style="left:calc(44px + 25ch);top:46px;height:57px"></div>
+<div class="al-guide" style="left:calc(44px + 46ch);top:46px;height:57px"></div>
+<div class="al-guide" style="left:calc(44px + 13ch);top:141px;height:57px"></div>
+<div class="al-guide" style="left:calc(44px + 26ch);top:160px;height:38px"></div>
+                    </div>
+                  </div>
+
+                  <div class="shot-view">
+                    <div class="sv-title"><span>Code Walkthrough: CW-0412</span><span class="actions"><span class="codicon codicon-filter"></span><span class="codicon codicon-refresh"></span><span class="codicon codicon-ellipsis"></span></span></div>
+                    <div class="sv-head"><span class="codicon codicon-chevron-down"></span><span class="t">Standards Checklist</span><span class="count-badge">11 / 16</span></div>
+                    <div class="sv-row" style="--d:0"><span class="codicon codicon-chevron-right"></span><span class="lbl">1&nbsp; Structure</span><span class="meta"><span class="codicon codicon-pass"></span>4/4</span></div>
+                    <div class="sv-row" style="--d:0"><span class="codicon codicon-chevron-right"></span><span class="lbl">2&nbsp; Comments</span><span class="meta"><span class="codicon codicon-pass"></span>3/3</span></div>
+                    <div class="sv-row" style="--d:0"><span class="codicon codicon-chevron-down"></span><span class="lbl">3&nbsp; Layout and naming</span><span class="meta">2/5</span></div>
+                    <div class="sv-row" style="--d:1"><span class="cb"><span class="codicon codicon-check"></span></span><span class="rn">3.1</span><span class="lbl">Indentation is 3 spaces per level</span><span class="codicon codicon-eye-closed eye"></span></div>
+                    <div class="sv-row sel" style="--d:1"><span class="cb"></span><span class="rn">3.2</span><span class="lbl"><code>:</code> and <code>:=</code> aligned in declarations</span><span class="sw" style="background:#2DD4BF"></span><span class="codicon codicon-eye eye on"></span></div>
+                    <div class="sv-guide">Declarations in a block line up their <code>:</code> and <code>:=</code>, so names, types and values read as columns. Guides are drawn through each block to check by eye.
+                      <div class="btns"><span class="wbtn secondary"><span class="codicon codicon-check"></span>Mark as Met</span><span class="wbtn primary"><span class="codicon codicon-comment"></span>Raise Finding</span></div>
+                    </div>
+                    <div class="sv-row" style="--d:1"><span class="cb"></span><span class="rn">3.3</span><span class="lbl">Constants in UPPER_SNAKE_CASE</span><span class="sw" style="background:#C084FC"></span><span class="codicon codicon-eye eye on"></span></div>
+                    <div class="sv-row" style="--d:1"><span class="cb"><span class="codicon codicon-check"></span></span><span class="rn">3.4</span><span class="lbl">Types in Mixed_Case</span><span class="codicon codicon-eye-closed eye"></span></div>
+                    <div class="sv-row" style="--d:1"><span class="cb"></span><span class="rn">3.5</span><span class="lbl">One declaration per line</span><span class="codicon codicon-eye-closed eye"></span></div>
+                    <div class="sv-row" style="--d:0"><span class="codicon codicon-chevron-right"></span><span class="lbl">7&nbsp; Error handling and logging</span><span class="meta">2/4</span></div>
+                    <div class="sv-head"><span class="codicon codicon-chevron-right"></span><span class="t">Technical Checklist</span><span class="count-badge">0 / 9</span></div>
+                    <div class="sv-head"><span class="codicon codicon-chevron-right"></span><span class="t">Findings</span><span class="count-badge">2</span></div>
+                  </div>
                 </div>
               </figure>
 
               <h2>Features</h2>
               <ul>
-                <li><strong>Guided tours</strong>: step through a codebase file by file, with each stop highlighting the lines that matter.</li>
-                <li><strong>Record in minutes</strong>: select some code, write a note, press <kbd>Enter</kbd>. Tours are saved to <code>.walkthroughs/</code> and versioned with the repo.</li>
-                <li><strong>Refactor-proof anchors</strong>: steps are pinned to symbols rather than line numbers, so tours survive renames and moves.</li>
-                <li><strong>Onboarding paths</strong>: chain tours into learning paths for new starters and see who has completed them.</li>
+                <li><strong>Standards at your fingertips</strong>: select any code to see the coding standard rules that apply to it, with the rationale behind each rule and compliant and non-compliant examples.</li>
+                <li><strong>Review checklists</strong>: the project's standards and technical review checklists, organised by section and ticked off by the reviewer as they work through the code. Progress is saved with the walkthrough.</li>
+                <li><strong>Visual aids</strong>: switch on a checklist item's eye to see what it covers drawn in the code, such as alignment guides through declaration blocks or every constant name outlined, so layout and naming can be checked at a glance.</li>
+                <li><strong>Walkthrough packs</strong>: gather the changes under review, the requirements they trace to and the author's notes into one pack, ready to send round before the meeting.</li>
+                <li><strong>Findings in place</strong>: when a reviewer spots a problem, they raise a finding on the exact lines, linked to the checklist item or standard it relates to.</li>
+                <li><strong>Walkthrough record</strong>: produces the completed review record, with attendees, checklist results, findings, actions and sign-off, ready for the project's quality records.</li>
                 <li><strong>Built on the Extension Library API</strong>: uses the shared <code>library.identity</code> and <code>library.repos</code> services, so there is nothing to configure.</li>
               </ul>
 
               <h2>Getting Started</h2>
               <ol>
-                <li>Open a repository that contains a <code>.walkthroughs</code> folder. Available tours appear in the <strong>Walkthroughs</strong> view.</li>
-                <li>Run <strong>Walkthrough: Start Tour</strong> from the Command Palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).</li>
-                <li>Use <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>→</kbd> and <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>←</kbd> to move between steps.</li>
+                <li>Open the changes to be reviewed and run <strong>Code Walkthrough: Prepare Walkthrough</strong> from the Command Palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) to build the pack and open the review checklists.</li>
+                <li>Work through the checklists as you read the code. Switch on an item's eye to highlight what it covers, or select a line and run <strong>Show Applicable Standards</strong> to see the relevant rules and guidance.</li>
+                <li>Raise findings against checklist items as you go, then finish with <strong>Code Walkthrough: Complete Review</strong> to produce the record.</li>
               </ol>
 
               <h2>Commands</h2>
               <table>
                 <tr><th>Command</th><th>Keybinding</th><th>Description</th></tr>
-                <tr><td>Walkthrough: Start Tour</td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>W</kbd></td><td>Pick a tour from the current repository and begin at step 1.</td></tr>
-                <tr><td>Walkthrough: Record New Tour</td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd></td><td>Start recording. Each selection plus note becomes a step.</td></tr>
-                <tr><td>Walkthrough: Share Tour</td><td>None</td><td>Publish a tour to the team's onboarding path.</td></tr>
+                <tr><td>Code Walkthrough: Prepare Walkthrough</td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>W</kbd></td><td>Build the walkthrough pack and open the review checklists for the current changes.</td></tr>
+                <tr><td>Code Walkthrough: Show Applicable Standards</td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td><td>Show the coding standard rules, rationale and examples for the selected code.</td></tr>
+                <tr><td>Code Walkthrough: Open Checklist</td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd></td><td>Open the standards or technical review checklist for this walkthrough.</td></tr>
+                <tr><td>Code Walkthrough: Raise Finding</td><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F</kbd></td><td>Raise a finding on the selected lines, linked to a checklist item.</td></tr>
+                <tr><td>Code Walkthrough: Complete Review</td><td>None</td><td>Record the checklist results, actions and sign-off.</td></tr>
               </table>
 
               <h2>Extension Settings</h2>
 <pre>{
-  <span class="k">"walkthrough.autoStartForNewStarters"</span>: <span class="b">true</span>,
-  <span class="k">"walkthrough.showStepNumbers"</span>: <span class="b">true</span>,
-  <span class="k">"walkthrough.highlightStyle"</span>: <span class="s">"gutter"</span>,
-  <span class="k">"walkthrough.maxStepsPerTour"</span>: <span class="n">25</span>
+  <span class="k">"codeWalkthrough.codingStandard"</span>: <span class="s">"ada-coding-standard-v4"</span>,
+  <span class="k">"codeWalkthrough.checklists"</span>: [<span class="s">"Standards"</span>, <span class="s">"Technical"</span>],
+  <span class="k">"codeWalkthrough.showStandardsOnHover"</span>: <span class="b">true</span>,
+  <span class="k">"codeWalkthrough.visualAids"</span>: [<span class="s">"alignment"</span>, <span class="s">"naming"</span>, <span class="s">"indentation"</span>],
+  <span class="k">"codeWalkthrough.requireSignOff"</span>: <span class="b">true</span>
 }</pre>
 
               <h2>Requirements</h2>
               <ul>
                 <li>Extension Library <strong>2.0</strong> or later (installed automatically).</li>
-                <li>Read access to the repository you are touring.</li>
+                <li>Access to the workset under review.</li>
               </ul>
             </article>
           </div>
@@ -1355,7 +1433,7 @@ a { color: var(--link); text-decoration: none; }
               <div class="mi-title">Categories</div>
               <div class="categories">
                 <span class="category">Education</span>
-                <span class="category">Visualization</span>
+                <span class="category">Peer Review</span>
                 <span class="category">Other</span>
               </div>
             </div>

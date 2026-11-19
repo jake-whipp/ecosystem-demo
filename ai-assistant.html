@@ -727,6 +727,9 @@ a { color: var(--link); text-decoration: none; }
 .code-editor { flex: 1; min-height: 0; display: flex; position: relative; overflow: hidden; font-family: var(--mono); font-size: 14px; line-height: 19px; }
 .code-lines { flex: 1; min-width: 0; position: relative; }
 .row { display: flex; height: 19px; }
+.row .glyph { width: 22px; flex: none; display: flex; align-items: center; justify-content: center; }
+.row .glyph .codicon[class*='codicon-'] { font-size: 15px; }
+.row .glyph + .ln { width: 38px; }
 .row .ln { width: 56px; flex: none; text-align: right; color: #6E7681; }
 .row .fold { width: 26px; flex: none; display: flex; align-items: center; justify-content: center; color: #C5C5C5; }
 .row .fold .codicon { visibility: hidden; }
@@ -1127,8 +1130,15 @@ end Health_Monitor;
       inner += '<span style="position:relative">' + tokenize(l, ctx) + '</span>';
       if (no === o.cursorLine && o.cursorCol) inner += '<span class="caret" style="left:' + (o.cursorCol - 1) + 'ch"></span>';
       if (o.after && o.after[no]) inner += o.after[no];
-      html += '<div class="' + cls + '" data-line="' + no + '"><span class="ln">' + no + '</span><span class="fold">' +
-        (has(foldable, no) ? '<span class="codicon codicon-chevron-down"></span>' : '') + '</span><div class="txt">' + inner + '</div></div>';
+      if (o.lineClass && o.lineClass[no]) cls += ' ' + o.lineClass[no];
+      if (no >= (o.firstLine || 1)) {
+        if (o.before && o.before[no]) html += o.before[no];
+        html += '<div class="' + cls + '" data-line="' + no + '">' +
+          (o.glyphMargin ? '<span class="glyph">' + ((o.glyphs && o.glyphs[no]) || '') + '</span>' : '') +
+          '<span class="ln">' + no + '</span><span class="fold">' +
+          (has(foldable, no) ? '<span class="codicon codicon-chevron-down"></span>' : '') + '</span><div class="txt">' + inner + '</div></div>';
+        if (o.blocks && o.blocks[no]) html += o.blocks[no];
+      }
       /* minimap: coloured blocks per token */
       var row = '<span style="display:inline-block;width:' + (ind[i] && l.trim() ? l.match(/^ */)[0].length : 0) + 'px"></span>';
       var tmp = document.createElement('div'); tmp.innerHTML = tokenize(l.trim(), ctx);
@@ -1140,7 +1150,7 @@ end Health_Monitor;
       mm += '<div class="mm-row">' + row + '</div>';
     });
     target.innerHTML = '<div class="code-lines">' + html + '</div>' +
-      '<div class="minimap">' + mm + '<div class="mm-slider" style="height:' + (o.sliderHeight || 100) + '%"></div></div>';
+      '<div class="minimap">' + mm + '<div class="mm-slider" style="top:' + (o.sliderTop || 0) + 'px;height:' + (o.sliderHeight || 100) + '%"></div></div>';
   };
 })();
 </script>
